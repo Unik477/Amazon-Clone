@@ -1,0 +1,15 @@
+.cart{
+    display: flex;
+}
+
+.cart-items{
+    width: 80%;
+   margin: 10px;
+   padding: 5px;
+   background-color: white;
+}
+
+.cart-items h1 , p{
+    margin: 0px 15px;
+   padding: 5px;
+}

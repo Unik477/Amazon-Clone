@@ -8,6 +8,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ProductDetails from './components/ProductDetails';
 import ProductDescription from './components/ProductDescription';
+import Cart from './components/Cart';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,6 +18,7 @@ root.render(
      <Routes>
        <Route exact path="/" element={<App />}/>
        <Route exact path="/productdetails" element={<ProductDetails/>}/>
+       <Route exact path="/cart" element={<Cart/>}/>
        <Route exact path="/productdescription" element={<ProductDescription/>}/>
      </Routes>
      <Footer/>

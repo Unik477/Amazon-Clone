@@ -1,5 +1,6 @@
 import React from 'react';
 import './ProductCard.css'; // We'll add the styles for the card in this file
+import { Link } from 'react-router-dom';
 
 const ProductCard = ({ product }) => {
     return (
@@ -31,7 +32,9 @@ const ProductCard = ({ product }) => {
                 </div>
                 <p className="seller-info">Sold by {product.seller}</p>
             </div>
-            <button className="add-to-cart-btn">Add to cart</button>
+            <Link to={"/cart"}>
+            <button className="add-to-cart-btn">Add to cart</button>   
+            </Link>
         </div>
     );
 };

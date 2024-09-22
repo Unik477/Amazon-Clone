@@ -1,0 +1,88 @@
+.cart-item {
+    display: flex;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 20px 15px;
+    font-family: Arial, sans-serif;
+    background-color: white;
+
+  }
+  
+  .item-image {
+    flex: 0 0 100px;
+    margin-right: 20px;
+    
+  }
+  .item-image img{
+    width: 400px;
+    height: 300px;
+  }
+  .item-details {
+    flex: 1;
+  }
+  
+  .item-price {
+    flex: 0 0 150px;
+    text-align: right;
+  }
+  
+  .item-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .item-meta, .item-stats, .item-stock, .item-prime, .item-gift, .item-color, .item-style {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .best-seller1 {
+    background-color: #ff9900;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-weight: bold;
+  }
+  
+  .item-prime {
+    color: #00a8e1;
+    display: flex;
+    align-items: center;
+  }
+  
+  .item-actions {
+    margin-top: 10px;
+  }
+  
+  .item-quantity, .action-button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    cursor: pointer;
+  }
+  
+  .item-price {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .currency {
+    font-size: 14px;
+    vertical-align: top;
+  }
+  
+  .coupon-info {
+    font-size: 14px;
+    color: #067d62;
+    margin-top: 5px;
+  }
+  
+  .coupon-collected {
+    font-weight: bold;
+  }
+  
+  .subscribe-save {
+    font-size: 14px;
+    color: #067d62;
+    margin-top: 5px;
+  }
