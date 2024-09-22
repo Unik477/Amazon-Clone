@@ -1,14 +1,23 @@
-import React from 'react';
-import '../App.css'; // Ensure this points to your CSS file
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 
 const Navbar = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
     return (
         <header>
             <div className="navbar">
                 <div className="nav-logo">
-                    <div className="logo"></div>
+                    <Link to={"/"}>
+                        <div className="logo"></div>
+                    </Link>
                 </div>
-                <div className="nav-address">
+                <div className="nav-address hide-mobile">
                     <p className="add-first">Deliver to</p>
                     <div className="add-icon">
                         <i className="fa-solid fa-location-crosshairs"></i>
@@ -49,23 +58,28 @@ const Navbar = () => {
                     <input className="search-input" type="text" placeholder="Search...." />
                     <i className="fa-solid fa-magnifying-glass search-icon"></i>
                 </div>
-                <div className="nav-language">
-                    <i className="fa-solid fa-globe"></i> EN
-                    <span><i className="fa-sharp fa-solid fa-circle-chevron-down"></i></span>
-                </div>
-                <div className="nav-signin">
-                    <p><span>Hello, sign in</span></p>
-                    <p className="nav-second">Account & Lists <i className="fa-sharp fa-solid fa-circle-chevron-down"></i></p>
-                </div>
-                <div className="nav-returns">
-                    <p><span>Returns</span></p>
-                    <p className="nav-second">& Orders <i className="fa-sharp fa-solid fa-circle-chevron-down"></i></p>
-                </div>
-                <div className="nav-cart">
-                    <i className="fa-solid fa-cart-shopping"></i> Cart
+                <div className="nav-right">
+                    <div className="nav-language hide-mobile">
+                        <i className="fa-solid fa-globe"></i> EN
+                        <span><i className="fa-sharp fa-solid fa-circle-chevron-down"></i></span>
+                    </div>
+                    <div className="nav-signin hide-mobile">
+                        <p><span>Hello, sign in</span></p>
+                        <p className="nav-second">Account & Lists <i className="fa-sharp fa-solid fa-circle-chevron-down"></i></p>
+                    </div>
+                    <div className="nav-returns hide-mobile">
+                        <p><span>Returns</span></p>
+                        <p className="nav-second">& Orders <i className="fa-sharp fa-solid fa-circle-chevron-down"></i></p>
+                    </div>
+                    <div className="nav-cart">
+                        <i className="fa-solid fa-cart-shopping"></i> Cart
+                    </div>
+                    <div className="menu-icon" onClick={toggleMenu}>
+                        <i className="fa-solid fa-bars"></i>
+                    </div>
                 </div>
             </div>
-            <div className="bottom-panel">
+            <div className={`bottom-panel ${isMenuOpen ? 'open' : ''}`}>
                 <div className="panel-alt">
                     <i className="fa-solid fa-bars"></i> All
                 </div>

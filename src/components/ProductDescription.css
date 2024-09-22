@@ -1,0 +1,142 @@
+.product-description {
+    display: flex;
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .product-info {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .product-info-img {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .product-info-img img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .price-card-container {
+    width: 300px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .ratings {
+    margin-bottom: 10px;
+  }
+  
+  .stars {
+    color: #FFA41C;
+    margin-right: 5px;
+  }
+  
+  .rating-count {
+    color: #007185;
+  }
+  
+  .deal-badge {
+    display: inline-block;
+    background-color: #CC0C39;
+    color: white;
+    padding: 2px 5px;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  
+  .price-section {
+    margin-bottom: 10px;
+  }
+  
+  .current-price {
+    font-size: 28px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .original-price {
+    text-decoration: line-through;
+    color: #565959;
+  }
+  
+  .discount {
+    color: #CC0C39;
+  }
+  
+  .emi-option {
+    color: #007600;
+    margin-bottom: 10px;
+  }
+  
+  .offers {
+    margin-bottom: 20px;
+  }
+  
+  .offer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .offer-item {
+    border: 1px solid #D5D9D9;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .product-features {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .feature {
+    display: flex;
+    align-items: center;
+  }
+  
+  .feature-icon {
+    font-size: 24px;
+    margin-right: 5px;
+  }
+  
+  .about-item ul {
+    padding-left: 20px;
+  }
+  
+  .about-item li {
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .product-description {
+      flex-direction: column;
+    }
+  
+    .product-info {
+      padding-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .price-card-container {
+      width: 100%;
+    }
+  
+    .product-info-img img {
+      max-width: 100%;
+      height: auto;
+    }
+  }

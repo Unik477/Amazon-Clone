@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import '../App.css'; // Ensure this points to your CSS file
+import '../App.css';
 
 const HeroSection = () => {
     const images = [
-        '/Images/hero_image1.jpg',  // Replace with actual image paths
-        '/Images/hero_image2.jpg',
-        '/Images/hero_image3.jpg',
-        '/Images/hero_image4.jpg',
-        '/Images/hero_image5.jpg',
+        `${process.env.PUBLIC_URL}/Images/hero_image1.jpg`,  
+        `${process.env.PUBLIC_URL}/Images/hero_image2.jpg`,
+        `${process.env.PUBLIC_URL}/Images/hero_image3.jpg`,
+        `${process.env.PUBLIC_URL}/Images/hero_image4.jpg`,
+        `${process.env.PUBLIC_URL}/Images/hero_image5.jpg`,
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -21,7 +21,7 @@ const HeroSection = () => {
     }, [images.length]);
 
     return (
-        <div className="hero-section" style={{ backgroundImage: `url(${images[currentIndex]})` }}>
+        <div className="hero-section" style={{ backgroundImage: `url(${images[currentIndex]})`}}>
             <div className="hero-msg">
                 <p>
                     You are on amazon.com. You can also shop on Amazon India for millions of products with fast local delivery.
