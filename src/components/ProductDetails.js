@@ -7,7 +7,7 @@ export default function ProductDetails() {
 
     
     const products = [
-        {
+        {   id: 1,
             name: "Under Eye Patches - 60 Pcs",
             description: "24K Gold Eye Mask - Puffy Eyes & Dark Circles Treatments, Reduce Under Eye Bags",
             skinType: "All Skin Type",
@@ -21,7 +21,7 @@ export default function ProductDetails() {
             image: `${process.env.PUBLIC_URL}/Images/box1_image.jpg`,
             isBestSeller: true
         },
-        {
+        {   id: 2,
             name: "Hydrating Face Cream - 50g",
             description: "Rich moisturizing cream for all-day hydration.",
             skinType: "Dry Skin",
@@ -35,7 +35,7 @@ export default function ProductDetails() {
             image: `${process.env.PUBLIC_URL}/Images/box2_image.jpg`,
             isBestSeller: false
         },
-        {
+        {   id: 3,
             name: "Sunscreen SPF 50 - 100ml",
             description: "Protects against harmful UV rays with broad-spectrum protection.",
             skinType: "All Skin Type",
@@ -49,7 +49,7 @@ export default function ProductDetails() {
             image: `${process.env.PUBLIC_URL}/Images/box3_image.jpg`,
             isBestSeller: true
         },
-        {
+        {   id: 4,
             name: "Vitamin C Serum - 30ml",
             description: "Brightens skin and reduces signs of aging.",
             skinType: "All Skin Type",
@@ -63,7 +63,7 @@ export default function ProductDetails() {
             image: `${process.env.PUBLIC_URL}/Images/box4_image.jpg`,
             isBestSeller: true
         },
-        {
+        {   id: 5,
             name: "Moisturizing Lip Balm - 15g",
             description: "Keeps lips soft and hydrated all day long.",
             skinType: "All Skin Type",
@@ -77,7 +77,7 @@ export default function ProductDetails() {
             image: `${process.env.PUBLIC_URL}/Images/box5_image.jpg`,
             isBestSeller: false
         },
-        {
+        {   id: 6,
             name: "Hair Growth Oil - 100ml",
             description: "Stimulates hair growth and strengthens hair.",
             skinType: "All Hair Types",
@@ -91,7 +91,7 @@ export default function ProductDetails() {
             image: `${process.env.PUBLIC_URL}/Images/box6_image.jpg`,
             isBestSeller: true
         },
-        {
+        {   id: 6,
             name: "Exfoliating Body Scrub - 200g",
             description: "Gently exfoliates skin, leaving it soft and smooth.",
             skinType: "All Skin Type",
@@ -105,7 +105,7 @@ export default function ProductDetails() {
             image: `${process.env.PUBLIC_URL}/Images/box7_image.jpg`,
             isBestSeller: false
         },
-        {
+        {   id: 7,
             name: "Charcoal Face Mask - 100g",
             description: "Deep cleans pores and detoxifies skin.",
             skinType: "Oily Skin",
@@ -119,7 +119,7 @@ export default function ProductDetails() {
             image: `${process.env.PUBLIC_URL}/Images/box8_image.jpg`,
             isBestSeller: true
         },
-        {
+        {   id: 8,
             name: "Night Repair Cream - 50g",
             description: "Rejuvenates skin overnight for a radiant look.",
             skinType: "All Skin Type",

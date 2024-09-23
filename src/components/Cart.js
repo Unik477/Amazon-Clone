@@ -16,9 +16,10 @@ export default function Cart() {
         ) : (
           cartItems.map((item, index) => (
             <CartItems
-              key={index}
-              image={item.image}
-              description={item.description}
+            key={item.id}  // Provide unique id to each cart item
+                            id={item.id}
+                            image={item.image}
+                            description={item.description}
             />
           ))
         )}

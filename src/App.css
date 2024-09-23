@@ -33,7 +33,11 @@ body{
     width: 100%;
     background-size: cover;
 }
+.cart-link{
+    color: #fff;
+    text-decoration: none;
 
+}
 .nav-search {
     display: flex;
     align-items: center;

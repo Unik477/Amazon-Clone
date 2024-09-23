@@ -72,7 +72,7 @@ const Navbar = () => {
                         <p className="nav-second">& Orders <i className="fa-sharp fa-solid fa-circle-chevron-down"></i></p>
                     </div>
                     <div className="nav-cart">
-                    <Link to={"/cart"} class>
+                    <Link to={"/cart"} className='cart-link'>
                         <i className="fa-solid fa-cart-shopping"></i> Cart
                     </Link>
                     </div>

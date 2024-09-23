@@ -1,8 +1,16 @@
-import React from 'react';
-import { Check, ChevronDown } from 'lucide-react';
+import React, { useContext } from 'react';
+import { CartContext } from './CartContext';
+import { Check } from 'lucide-react';
 import './CartItems.css'; 
 
 const CartItems = (props ) => {
+
+    const { removeFromCart } = useContext(CartContext);  // Get removeFromCart function
+  
+    const handleDelete = () => {
+      removeFromCart(props.id);  // Call removeFromCart with the product id
+    };
+
   return (
     <div className="cart-item">
       <div className="item-image">
@@ -28,7 +36,7 @@ const CartItems = (props ) => {
           <select className="item-quantity">
             <option>Qty: 1</option>
           </select>
-          <button className="action-button">Delete</button>
+          <button className="action-button" onClick={handleDelete}>Delete</button>
           <button className="action-button">Save for later</button>
           <button className="action-button">See more like this</button>
           <button className="action-button">Share</button>
