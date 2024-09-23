@@ -5,7 +5,7 @@ import './PriceCard.css';
 const PriceCard = () => {
   return (
     <div className="price-card">
-      <div className="price">₹3,999<sup>00</sup></div>
+      <div className="price">₹1,31,999</div>
       
       <div className="prime-delivery">
         <span className="prime">✓prime</span>

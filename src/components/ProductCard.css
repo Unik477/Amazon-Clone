@@ -8,7 +8,9 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 10px;
 }
-
+.product-card-link{
+text-decoration: none;
+}
 .best-seller {
     position: absolute;
     top: 10px;

@@ -1,101 +1,102 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Search, ShoppingCart, ChevronDown, Menu } from 'lucide-react';
+import "./Navbar.css"
 import { Link } from 'react-router-dom';
 
-
 const Navbar = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
-
-    return (
-        <header>
-            <div className="navbar">
-                <div className="nav-logo">
-                    <Link to={"/"}>
-                        <div className="logo"></div>
-                    </Link>
-                </div>
-                <div className="nav-address hide-mobile">
-                    <p className="add-first">Deliver to</p>
-                    <div className="add-icon">
-                        <i className="fa-solid fa-location-crosshairs"></i>
-                        <p className="add-second">India</p>
-                    </div>
-                </div>
-                <div className="nav-search">
-                    <select className="search-select">
-                        <option selected="selected">All</option>
-                        <option>Arts & Crafts</option>
-                        <option>Automotive</option>
-                        <option>Baby</option>
-                        <option>Beauty & Personal Care</option>
-                        <option>Books</option>
-                        <option>Boys' Fashion</option>
-                        <option>Computers</option>
-                        <option>Deals</option>
-                        <option>Digital Music</option>
-                        <option>Electronics</option>
-                        <option>Girls' Fashion</option>
-                        <option>Health & Household</option>
-                        <option>Home & Kitchen</option>
-                        <option>Industrial & Scientific</option>
-                        <option>Kindle Store</option>
-                        <option>Luggage</option>
-                        <option>Men's Fashion</option>
-                        <option>Movies & TV</option>
-                        <option>Music, CDs & Vinyl</option>
-                        <option>Pet Supplies</option>
-                        <option>Prime Video</option>
-                        <option>Software</option>
-                        <option>Sports & Outdoors</option>
-                        <option>Tools & Home Improvement</option>
-                        <option>Toys & Games</option>
-                        <option>Video Games</option>
-                        <option>Women's Fashion</option>
-                    </select>
-                    <input className="search-input" type="text" placeholder="Search...." />
-                    <i className="fa-solid fa-magnifying-glass search-icon"></i>
-                </div>
-                <div className="nav-right">
-                    <div className="nav-language hide-mobile">
-                        <i className="fa-solid fa-globe"></i> EN
-                        <span><i className="fa-sharp fa-solid fa-circle-chevron-down"></i></span>
-                    </div>
-                    <div className="nav-signin hide-mobile">
-                        <p><span>Hello, sign in</span></p>
-                        <p className="nav-second">Account & Lists <i className="fa-sharp fa-solid fa-circle-chevron-down"></i></p>
-                    </div>
-                    <div className="nav-returns hide-mobile">
-                        <p><span>Returns</span></p>
-                        <p className="nav-second">& Orders <i className="fa-sharp fa-solid fa-circle-chevron-down"></i></p>
-                    </div>
-                    <div className="nav-cart">
-                    <Link to={"/cart"} className='cart-link'>
-                        <i className="fa-solid fa-cart-shopping"></i> Cart
-                    </Link>
-                    </div>
-                    <div className="menu-icon" onClick={toggleMenu}>
-                        <i className="fa-solid fa-bars"></i>
-                    </div>
-                </div>
+  return (
+    <header className="amazon-header">
+      <nav className="navbar">
+        <div className="navbar-left">
+          <Link to={"/"}>
+            <img src={`${process.env.PUBLIC_URL}/Images/amazon_logo.png`} alt="Amazon Logo" className="logo" />
+          </Link>
+          <div className="delivery-info">
+            <span>Deliver to Nikhil</span>
+            <strong>New Delhi 110063</strong>
+          </div>
+        </div>
+        
+        <div className="search-bar">
+          <select className="search-category">
+            <option>All</option>
+            <option>Arts & Crafts</option>
+            <option>Automotive</option>
+            <option>Baby</option>
+            <option>Beauty & Personal Care</option>
+            <option>Books</option>
+            <option>Boys' Fashion</option>
+            <option>Computers</option>
+            <option>Deals</option>
+            <option>Digital Music</option>
+            <option>Electronics</option>
+            <option>Girls' Fashion</option>
+            <option>Health & Household</option>
+            <option>Home & Kitchen</option>
+            <option>Industrial & Scientific</option>
+            <option>Kindle Store</option>
+            <option>Luggage</option>
+            <option>Men's Fashion</option>
+            <option>Movies & TV</option>
+            <option>Music, CDs & Vinyl</option>
+            <option>Pet Supplies</option>
+            <option>Prime Video</option>
+            <option>Software</option>
+            <option>Sports & Outdoors</option>
+            <option>Tools & Home Improvement</option>
+            <option>Toys & Games</option>
+            <option>Video Games</option>
+            <option>Women's Fashion</option>
+          </select>
+          <input type="text" placeholder="Search Amazon.in" className="search-input" />
+          <button className="search-button">
+            <Search size={20} />
+          </button>
+        </div>
+        
+        <div className="navbar-right">
+          <div className="language-selector">
+            <img src={`${process.env.PUBLIC_URL}/Images/Flag_of_India.png`} alt="India Flag" className="flag" />
+            <span>EN</span>
+            <ChevronDown size={16} />
+          </div>
+          <div className="account-info">
+            <span>Hello, Nikhil</span>
+            <strong>Account & Lists</strong>
+            <ChevronDown size={16} />
+          </div>
+          <div className="returns-orders">
+            <span>Returns</span>
+            <strong>& Orders</strong>
+          </div>
+          <Link to={"/cart"} className='cart-link'>
+            <div className="cart">
+              <ShoppingCart size={34} />
+              <span>Cart</span>
             </div>
-            <div className={`bottom-panel ${isMenuOpen ? 'open' : ''}`}>
-                <div className="panel-alt">
-                    <i className="fa-solid fa-bars"></i> All
-                </div>
-                <div className="panel-options">
-                    <p>Today's Deals</p>
-                    <p>Customer Service</p>
-                    <p>Registry</p>
-                    <p>Gift Cards</p>
-                    <p>Sell</p>
-                </div>
-                <div className="panel-deals">Shop deals in Electronics</div>
-            </div>
-        </header>
-    );
+          </Link>
+        </div>
+      </nav>
+
+      <nav className="subnav">
+        <ul>
+          <li><a href="#all"><Menu size={18} /> All</a></li>
+          <li><a href="#fresh">Fresh</a></li>
+          <li><a href="#amazon-minitv">Amazon miniTV</a></li>
+          <li><a href="#sell">Sell</a></li>
+          <li><a href="#gift-cards">Gift Cards</a></li>
+          <li><a href="#flights">Flights</a></li>
+          <li><a href="#browsing-history">Browsing History</a></li>
+          <li><a href="#buy-again">Buy Again</a></li>
+          <li><a href="#nikhils-amazon">Nikhil's Amazon.in</a></li>
+          <li><a href="#amazon-pay">Amazon Pay</a></li>
+          <li><a href="#amazon-basics">AmazonBasics</a></li>
+          <li><a href="#health">Health, Household & Personal Care</a></li>
+          <li><a href="#customer-service">Customer Service</a></li>
+        </ul>
+      </nav>
+    </header>
+  );
 };
 
 export default Navbar;

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { CartContext } from './CartContext'; 
 import './ProductCard.css'; // We'll add the styles for the card in this file
+import { Link } from 'react-router-dom';
 
 const ProductCard = ({ product }) => {
 
@@ -14,6 +15,7 @@ const ProductCard = ({ product }) => {
 
     return (
         <div className="product-card">
+            <Link to={"/productdescription"} className='product-card-link'>
             {product.isBestSeller && <span className="best-seller">Best Seller</span>}
             <div className="product-image">
                 <img src={product.image} alt={product.name} />
@@ -41,6 +43,7 @@ const ProductCard = ({ product }) => {
                 </div>
                 <p className="seller-info">Sold by {product.seller}</p>
             </div>
+                    </Link>
             
             <button className="add-to-cart-btn" onClick={handleAddToCart}>Add to cart</button>   
             

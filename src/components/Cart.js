@@ -3,6 +3,7 @@ import React, { useContext } from 'react';
 import { CartContext } from './CartContext';   // Import CartContext
 import CartItems from './CartItems';           // Import CartItems component
 import './cart.css';
+import OrderSummary from './OrderSummary';
 
 export default function Cart() {
   const { cartItems } = useContext(CartContext);  // Access cartItems from context
@@ -12,7 +13,7 @@ export default function Cart() {
       <div className="cart-items">
         <h1>Shopping Cart</h1>
         {cartItems.length === 0 ? (
-          <p>Your cart is empty</p>
+          <p>Your Amazon cart is empty</p>
         ) : (
           cartItems.map((item, index) => (
             <CartItems
@@ -23,6 +24,10 @@ export default function Cart() {
             />
           ))
         )}
+      </div>
+
+      <div className='cart-total'>
+        <OrderSummary itemCount={3} subtotal={3465}/>
       </div>
     </div>
   );

@@ -7,17 +7,17 @@ const ProductDescription = () => {
     <div className="product-description">
       <div className="product-info">
         <div className="product-info-img">
-        <img src={`${process.env.PUBLIC_URL}/Images/description.jpeg`} alt='not found'/>
+        <img src={`${process.env.PUBLIC_URL}/Images/samsungPhone.jpeg`} alt='not found'/>
         </div>
-        <h1>Ambrane 85W Fast Charging Powerbank for MacBook, Type C Laptop & Mobile Charging, 20,000mAh Battery, Triple Output, Power Delivery & Quick Charge (Powerlit Ultra lite, Black)</h1>
+        <h1>Samsung Galaxy S24 Ultra 5G AI Smartphone (Titanium Violet, 12GB, 512GB Storage)</h1>
         <div className="ratings">
           <span className="stars">★★★★☆</span>
           <span className="rating-count">2,220 ratings</span>
         </div>
         <div className="deal-badge">Limited Time Deal</div>
         <div className="price-section">
-          <span className="current-price">₹3,999</span>
-          <span className="original-price">M.R.P.: ₹5,999</span>
+          <span className="current-price">₹1,31,999</span>
+          <span className="original-price">M.R.P.: ₹1,44,999</span>
           <span className="discount">You Save: ₹2,000 (33%)</span>
         </div>
         <p>Inclusive of all taxes</p>

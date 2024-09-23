@@ -1,0 +1,49 @@
+.order-summary {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    font-family: Arial, sans-serif;
+    background-color: white;
+  }
+  
+  .subtotal {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .price {
+    color: #B12704;
+  }
+  
+  .gift-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .gift-option input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .gift-option label {
+    font-size: 14px;
+  }
+  
+  .proceed-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #FFD814;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .proceed-button:hover {
+    background-color: #F7CA00;
+  }

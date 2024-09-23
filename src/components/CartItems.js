@@ -9,6 +9,7 @@ const CartItems = (props ) => {
   
     const handleDelete = () => {
       removeFromCart(props.id);  // Call removeFromCart with the product id
+      alert(props.name + " has been removed from the cart")
     };
 
   return (
