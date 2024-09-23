@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { CartContext } from './CartContext'; 
 import './ProductCard.css'; // We'll add the styles for the card in this file
-import { Link } from 'react-router-dom';
 
 const ProductCard = ({ product }) => {
+
+    const { addToCart } = useContext(CartContext);  // Access addToCart function from context
+
+    const handleAddToCart = (e) => {
+      addToCart(product);  
+      alert(product.name + " Added to card")
+      e.stopPropagation()
+    };
+
     return (
         <div className="product-card">
             {product.isBestSeller && <span className="best-seller">Best Seller</span>}
@@ -32,9 +41,9 @@ const ProductCard = ({ product }) => {
                 </div>
                 <p className="seller-info">Sold by {product.seller}</p>
             </div>
-            <Link to={"/cart"}>
-            <button className="add-to-cart-btn">Add to cart</button>   
-            </Link>
+            
+            <button className="add-to-cart-btn" onClick={handleAddToCart}>Add to cart</button>   
+            
         </div>
     );
 };

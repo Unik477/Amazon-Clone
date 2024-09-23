@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { HashRouter as Router,Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -9,21 +9,24 @@ import Footer from './components/Footer';
 import ProductDetails from './components/ProductDetails';
 import ProductDescription from './components/ProductDescription';
 import Cart from './components/Cart';
+import { CartProvider } from './components/CartContext';  // Import CartProvider
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-  <Router>
-     <Navbar/>
-     <Routes>
-       <Route exact path="/" element={<App />}/>
-       <Route exact path="/productdetails" element={<ProductDetails/>}/>
-       <Route exact path="/cart" element={<Cart/>}/>
-       <Route exact path="/productdescription" element={<ProductDescription/>}/>
-     </Routes>
-     <Footer/>
-   </Router>
- </React.StrictMode>
+    <CartProvider>  {/* Wrap the application in CartProvider */}
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route exact path="/" element={<App />} />
+          <Route exact path="/productdetails" element={<ProductDetails />} />
+          <Route exact path="/cart" element={<Cart />} />
+          <Route exact path="/productdescription" element={<ProductDescription />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </CartProvider>  {/* Closing CartProvider */}
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,19 +1,28 @@
-import CartItems from "./CartItems";
-import "./cart.css"
-export default function Cart(){
 
-    return(
-        <div className="cart">
-            
-            <div className="cart-items">
-                <h1>Shopping Cart</h1>
-                <p>Deselect all items</p>
-            <CartItems image={`${process.env.PUBLIC_URL}/Images/box1_image.jpg`} description = {"Ambrane 85W Fast Charging Powerbank for MacBook, Type C Laptop & Mobile Charging, 20,000mAh Battery, Triple Output, Power Delivery & Quick Charge (Powerlit Ultra lite, Black)"}/>
-            <CartItems image={`${process.env.PUBLIC_URL}/Images/box2_image.jpg`} description = {"Ambrane 85W Fast Charging Powerbank for MacBook, Type C Laptop & Mobile Charging, 20,000mAh Battery, Triple Output, Power Delivery & Quick Charge (Powerlit Ultra lite, Black)"}/>
-            <CartItems image={`${process.env.PUBLIC_URL}/Images/box3_image.jpg`} description = {"Ambrane 85W Fast Charging Powerbank for MacBook, Type C Laptop & Mobile Charging, 20,000mAh Battery, Triple Output, Power Delivery & Quick Charge (Powerlit Ultra lite, Black)"}/>
-            <CartItems image={`${process.env.PUBLIC_URL}/Images/box4_image.jpg`} description = {"Ambrane 85W Fast Charging Powerbank for MacBook, Type C Laptop & Mobile Charging, 20,000mAh Battery, Triple Output, Power Delivery & Quick Charge (Powerlit Ultra lite, Black)"}/>
+import React, { useContext } from 'react';
+import { CartContext } from './CartContext';   // Import CartContext
+import CartItems from './CartItems';           // Import CartItems component
+import './cart.css';
 
-            </div>
-        </div>
-    )
+export default function Cart() {
+  const { cartItems } = useContext(CartContext);  // Access cartItems from context
+
+  return (
+    <div className="cart">
+      <div className="cart-items">
+        <h1>Shopping Cart</h1>
+        {cartItems.length === 0 ? (
+          <p>Your cart is empty</p>
+        ) : (
+          cartItems.map((item, index) => (
+            <CartItems
+              key={index}
+              image={item.image}
+              description={item.description}
+            />
+          ))
+        )}
+      </div>
+    </div>
+  );
 }

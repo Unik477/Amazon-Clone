@@ -72,7 +72,9 @@ const Navbar = () => {
                         <p className="nav-second">& Orders <i className="fa-sharp fa-solid fa-circle-chevron-down"></i></p>
                     </div>
                     <div className="nav-cart">
+                    <Link to={"/cart"} class>
                         <i className="fa-solid fa-cart-shopping"></i> Cart
+                    </Link>
                     </div>
                     <div className="menu-icon" onClick={toggleMenu}>
                         <i className="fa-solid fa-bars"></i>
