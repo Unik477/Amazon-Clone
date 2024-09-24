@@ -23,7 +23,7 @@ const Navbar = () => {
             <option>Arts & Crafts</option>
             <option>Automotive</option>
             <option>Baby</option>
-            <option>Beauty & Personal Care</option>
+            <option>Beauty </option>
             <option>Books</option>
             <option>Boys' Fashion</option>
             <option>Computers</option>
@@ -31,19 +31,19 @@ const Navbar = () => {
             <option>Digital Music</option>
             <option>Electronics</option>
             <option>Girls' Fashion</option>
-            <option>Health & Household</option>
-            <option>Home & Kitchen</option>
-            <option>Industrial & Scientific</option>
+            <option>Health</option>
+            <option>Home </option>
+            <option>Industrial</option>
             <option>Kindle Store</option>
             <option>Luggage</option>
             <option>Men's Fashion</option>
             <option>Movies & TV</option>
-            <option>Music, CDs & Vinyl</option>
+            <option>Music, CDs </option>
             <option>Pet Supplies</option>
             <option>Prime Video</option>
             <option>Software</option>
             <option>Sports & Outdoors</option>
-            <option>Tools & Home Improvement</option>
+            <option>Tools</option>
             <option>Toys & Games</option>
             <option>Video Games</option>
             <option>Women's Fashion</option>
